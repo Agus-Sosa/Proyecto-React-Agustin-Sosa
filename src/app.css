@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
 .boton-carrito {
@@ -16,19 +18,3 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.header {
-    box-shadow: 0px 6px 20px 0px #00000052;
-    background: black;
-}
-
-.contenedor-carrito {
-    display: flex;
-}
-
-.boton-carrito svg {
-    background: none;
-}
-.nav1 {
-    
-    margin: 20px 20px;
-}

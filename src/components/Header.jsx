@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './header.css'
 
 
 import { FaOpencart } from "react-icons/fa";
@@ -22,9 +23,9 @@ const Header = () => {
                 Samsung
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Xiaomi</NavDropdown.Item>
-              <NavDropdown.Divider />
+              {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
             <div className='contenedor-carrito'>
