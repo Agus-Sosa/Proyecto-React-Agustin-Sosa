@@ -1,0 +1,137 @@
+.boton-carrito {
+    margin: auto;
+    border: none;
+    font-size: 25px;
+    border-radius: 33px;
+    background: #1F1F1F;
+    display: flex;
+    padding: 7px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: .5s all;
+}
+
+.boton-carrito:hover {
+    transform: scale(1.05);
+}
+
+.portada-imagen {
+    margin: 20px;
+    box-shadow: 3px 4px 6px 0px rgb(0 0 0);
+    background: #120e0e;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.portada-texto {
+    color: white;
+}
+
+
+.contenedor-imagen {
+    background: url(https://es.directunlocks.com/devices/compressed/iphone14better.png?v=4);
+    height: 700px;
+    width: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    background-size: 40pc;
+}
+
+.texto-portada {
+    overflow: hidden;
+    color: white;
+    position: absolute;
+    top: 72%;
+    left: 2%;
+}
+
+.texto-portada h3{
+    display: inline-flex;
+    margin: 10px auto;
+    display: block;
+}
+
+.texto-portada p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.texto-portada button {
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    color: white;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+}
+
+.texto-portada button:hover {
+    opacity: 80%;
+}
+
+.titulo-productos {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+
+.contenedor-card {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.card-prod {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 10px 20px;
+    width: 292px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(249, 249, 249, 1);
+    border-radius: 10px;
+    transition: .6s all;
+
+}
+
+.card-prod:hover {
+    box-shadow: 0px 4px 15px 7px rgb(0 0 0 / 25%);
+}
+
+.imagen-prod {
+    display: flex;
+    width: 200px;
+    margin: auto;
+}
+
+.imagen-prod img{
+    width: 100%;
+}
+
+.informacion-prod p {
+    margin: auto;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-prod button {
+    background: #1F1F1F;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 10px;
+    border: none;
+    transition: .5s all;
+
+}
+
+.card-prod button:hover {
+    opacity: 80%;
+}

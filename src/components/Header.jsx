@@ -3,10 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './header.css'
+import Cartwidget from './Cartwidget/Cartwidget';
 
 
-import { FaOpencart } from "react-icons/fa";
-import {FaApple} from "react-icons/fa"
 const Header = () => {
     return (
       <Navbar bg="light" expand="lg" className='header' >
@@ -28,10 +27,7 @@ const Header = () => {
               </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
-            <div className='contenedor-carrito'>
-
-          <button className='boton-carrito'><FaOpencart/></button>
-            </div>
+          <Cartwidget/>
         </Navbar.Collapse>
       </Container>
     </Navbar>

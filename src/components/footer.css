@@ -1,0 +1,45 @@
+.contenedor-footer {
+    background-color: #1f1f1f;
+    color: white;
+    border-top: solid 2px black;
+    margin-top: 20px;
+
+}
+
+.contenedor-footer h2 {
+    margin: 10px;
+}
+
+.contenedor-footer h4 {
+    display: flex;
+    justify-content: center;
+
+}
+
+.contenedor-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-icons span{
+    font-size: 40px;
+    margin: 20px 50px;
+    color: white;
+    transition: .5s all;
+    cursor: pointer;
+}
+
+
+.contenedor-icons span:hover {
+    color: rgb(131, 123, 123);
+}
+
+.contenedor-copyright {
+    border-top: solid 1px gray;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-copyright span {
+    margin: 10px auto;
+}
