@@ -1,10 +1,12 @@
 import Item from "../components/Item";
 import { data } from "../utils/Productos"
 import AOS from 'aos';
+import {FiChevronRight} from 'react-icons/fi'
 import Itemlist from "../components/Itemlist";
 import '../components/home.css'
 import { fetchData } from "../utils/fetch-data";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+
 
 const Itemlistcontainer = () =>{
     const[datos, setDatos] = useState([]);
@@ -22,9 +24,10 @@ const Itemlistcontainer = () =>{
         data-aos-anchor-placement="bottom-bottom">
             <div className='contenedor-imagen'>
             <div className='texto-portada'>
-
+            <p className="p-portada1">Nuevo</p>
             <h3> Iphone 14 Pro Max</h3>
-            <p>$1,990.00</p>
+            <p className="p-portada2">Consulta por su disponibilidad</p>
+            <a href="">Mas Informacion <FiChevronRight/></a>
             {/* <button>Add to cart</button> */}
             </div>
             </div>

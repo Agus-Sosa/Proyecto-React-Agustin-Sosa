@@ -47,7 +47,7 @@ export const data = [
         imagen: 'https://fixechelectronica.com.ar/wp-content/uploads/2022/04/MI-11-T-8.png',
         nombre: 'Xiaomi 11T',
         empresa: 'Xiaomi',
-        precio: 999.99,
+        precio: 554,
         categoria: 3,
     },   
     {

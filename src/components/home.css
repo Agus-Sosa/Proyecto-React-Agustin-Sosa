@@ -40,6 +40,12 @@
     background-size: 40pc;
 }
 
+.p-portada1 {
+
+}
+
+
+
 .texto-portada {
     overflow: hidden;
     color: white;
@@ -57,6 +63,17 @@
 .texto-portada p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+}
+
+
+
+.texto-portada a {
+    text-decoration: none;
+    color: white;
+}
+
+.texto-portada a:hover {
+    color: rgb(181, 175, 175);
 }
 
 .texto-portada button {
@@ -134,4 +151,17 @@
 
 .card-prod button:hover {
     opacity: 80%;
+}
+
+@media screen and (max-width: 700px) {  
+
+    .contenedor-imagen {
+        background-size: 23pc;
+        height: 500px;
+    }
+    .texto-portada {
+        top: 65%;
+    }
+
+    
 }
