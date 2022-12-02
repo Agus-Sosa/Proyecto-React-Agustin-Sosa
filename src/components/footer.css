@@ -1,3 +1,14 @@
+.footer {
+    background: whitesmoke;
+    border-top: solid 1px;
+    margin-top: 20px;
+    color: black;
+}
+
+.icono-github {
+    font-size: 43px;
+}
+
 .contenedor-footer {
     background-color: #1f1f1f;
     color: white;

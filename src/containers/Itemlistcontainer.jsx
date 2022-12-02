@@ -6,17 +6,25 @@ import Itemlist from "../components/Itemlist";
 import '../components/home.css'
 import { fetchData } from "../utils/fetch-data";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 
 const Itemlistcontainer = () =>{
     const[datos, setDatos] = useState([]);
-
+    const {categoriaId} = useParams();
 
     useEffect(() =>{
-        fetchData(2000, data)
-        .then(response => setDatos(response))
-        .catch(error => console.log(error))
-    })
+        if(categoriaId) {
+
+            fetchData(2000, data.filter(item => item.categoria === parseInt(categoriaId)))
+            .then(response => setDatos(response))
+            .catch(error => console.log(error))
+        } else {
+            fetchData(2000, data)
+            .then(response => setDatos(response))
+            .catch(error => console.log(error))
+        }
+    }, [categoriaId])
     return (
         <>
         <div className="portada-imagen">

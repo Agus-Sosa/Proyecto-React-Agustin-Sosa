@@ -4,33 +4,36 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './header.css'
 import Cartwidget from './Cartwidget/Cartwidget';
+import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
     return (
-      <Navbar bg="light" expand="lg" className='header' >
-      <Container>
-        <Navbar.Brand href="#home" className='nav1'>City Phone</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home" className='nav1'>Home</Nav.Link>
-            <Nav.Link href="#link" className='nav1'>Contacto</Nav.Link>
-            <NavDropdown title="Categoria" id="basic-nav-dropdown" className='nav1'>
-              <NavDropdown.Item href="#action/3.1">Apple</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Samsung
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Xiaomi</NavDropdown.Item>
-              {/* <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-              </NavDropdown.Item> */}
-            </NavDropdown>
-          </Nav>
-          <Cartwidget/>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <div className="navbar bg-base-100">
+  <div className="navbar-start">
+    <div className="dropdown">
+      <label tabIndex={0} className="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+      </label>
+      <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><Link to='/categoria/1'><a>Apple</a></Link></li>
+        <li><Link to='/categoria/2'><a>Samsung</a></Link></li>
+        <li><Link to='/categoria/3'><a>Xiaomi</a></Link></li>
+      </ul>
+    </div>
+  </div>
+  <div className="navbar-center">
+    {/* <a className="btn btn-ghost normal-case text-xl">Zevon</a> */}
+    <Link to='/'><div className='btn btn-ghost normal-case text-xl'>Zevon</div></Link>
+  </div>
+  <div className='navbar-end'>
+    <div className='btn btn-ghost btn-circle ml-60'>
+    
+      <Cartwidget/>
+    </div>
+  </div>
+</div>
     )
 }
 

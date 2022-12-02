@@ -2,6 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; //
 import './home.css'
 
+
 const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
     return (
         <>
@@ -14,7 +15,9 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
                 <p className='nombre-empresa'>{empresa}</p>
                 <p className='precio-prod'>${precio}</p>
             </div>
-            <button className='boton-prod'>Add to cart</button>
+            <button className="btn">Ver producto</button>
+
+            {/* <button className='boton-prod'>Ver Producto</button> */}
             </div>
     
         </>

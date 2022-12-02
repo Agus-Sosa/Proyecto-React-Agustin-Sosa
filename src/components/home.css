@@ -3,16 +3,11 @@
     border: none;
     font-size: 25px;
     border-radius: 33px;
-    background: #1F1F1F;
+    /* background: #1F1F1F; */
     display: flex;
     padding: 7px;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    transition: .5s all;
-}
+    
 
-.boton-carrito:hover {
-    transform: scale(1.05);
 }
 
 .portada-imagen {
@@ -40,9 +35,7 @@
     background-size: 40pc;
 }
 
-.p-portada1 {
 
-}
 
 
 
@@ -50,7 +43,7 @@
     overflow: hidden;
     color: white;
     position: absolute;
-    top: 72%;
+    top: 77%;
     left: 2%;
 }
 
@@ -65,11 +58,17 @@
     font-size: 20px;
 }
 
+.texto-portada svg {
+margin: 5px 0px;
+}
+
 
 
 .texto-portada a {
     text-decoration: none;
+    display: flex;
     color: white;
+    transition: .5s all;
 }
 
 .texto-portada a:hover {
@@ -96,6 +95,7 @@
     font-size: 30px;
     font-weight: bold;
     justify-content: center;
+    color: black;
 }
 
 
@@ -114,6 +114,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: rgba(249, 249, 249, 1);
     border-radius: 10px;
+    color: black;
     transition: .6s all;
 
 }
@@ -138,10 +139,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.p-portada2 {
+    color: #cccaca;
+}
+
 .card-prod button {
     background: #1F1F1F;
     border-radius: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     color: white;
     margin: 10px;
     border: none;
@@ -150,7 +155,8 @@
 }
 
 .card-prod button:hover {
-    opacity: 80%;
+    background: hsl(var(--nf));
+    color: white;
 }
 
 @media screen and (max-width: 700px) {  
@@ -160,7 +166,7 @@
         height: 500px;
     }
     .texto-portada {
-        top: 65%;
+        top: 70%;
     }
 
     
