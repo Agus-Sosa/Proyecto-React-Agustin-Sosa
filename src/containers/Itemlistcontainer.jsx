@@ -7,7 +7,7 @@ import '../components/home.css'
 import { fetchData } from "../utils/fetch-data";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 const Itemlistcontainer = () =>{
     const[datos, setDatos] = useState([]);
@@ -35,7 +35,7 @@ const Itemlistcontainer = () =>{
             <p className="p-portada1">Nuevo</p>
             <h3> Iphone 14 Pro Max</h3>
             <p className="p-portada2">Consulta por su disponibilidad</p>
-            <a href="">Mas Informacion <FiChevronRight/></a>
+            <Link to={'item/1'}><a href="">Mas Informacion <FiChevronRight/></a></Link>
             {/* <button>Add to cart</button> */}
             </div>
             </div>
@@ -48,7 +48,7 @@ const Itemlistcontainer = () =>{
         </div> 
         <div className="contenedor-card">
             
-        <Itemlist props={datos}/>
+        <Itemlist item={datos}/>
         </div>
 
         {/* {

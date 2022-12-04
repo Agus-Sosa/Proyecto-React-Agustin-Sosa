@@ -2,9 +2,9 @@ import Header from "./components/Header";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Itemlistcontainer from "./containers/Itemlistcontainer";
-import ItemDetailContainer from "./containers/ItemDetailContainer";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 const App = () =>{
   return (
     <>
@@ -13,10 +13,11 @@ const App = () =>{
     <Routes>
       <Route path="/"element={<Itemlistcontainer/>}/>
       <Route path="/categoria/:categoriaId" element={<Itemlistcontainer/>}/>
-      {/* <Route path="/datelle" element={<ItemDetailContainer/>}/>  */}
+      <Route path="/item/:idProducto" element={<ItemDetailContainer/>}/> 
     </Routes>
     <Footer/>
     </BrowserRouter>
+    
     </>
   )
 }

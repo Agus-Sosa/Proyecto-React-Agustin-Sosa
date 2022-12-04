@@ -1,11 +1,12 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'; //
 import './home.css'
-
+import { Link } from 'react-router-dom';
 
 const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
     return (
         <>
+
             <div className='card-prod'>
             <article className='imagen-prod'>
                 <img src={imagen} alt="Producto" />
@@ -15,10 +16,14 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
                 <p className='nombre-empresa'>{empresa}</p>
                 <p className='precio-prod'>${precio}</p>
             </div>
-            <button className="btn">Ver producto</button>
+            <div>
+            <Link to={`/item/${id}`}><button className="btn">Ver producto</button></Link>
+            </div>
 
             {/* <button className='boton-prod'>Ver Producto</button> */}
             </div>
+
+            
     
         </>
     )
