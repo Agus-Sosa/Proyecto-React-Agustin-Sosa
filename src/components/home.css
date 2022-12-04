@@ -178,6 +178,21 @@ margin: 5px 0px;
     ;
     
 }
+.contenedor-carousel {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    height: 670px;
+    border-radius: 20px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+}
+
+.contenedor-carousel2 {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+}
 
 @media screen and (max-width: 700px) {  
 
