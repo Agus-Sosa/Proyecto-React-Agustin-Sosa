@@ -8,6 +8,8 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
         <>
 
             <div className='card-prod'>
+            <div data-aos="zoom-in">
+
             <article className='imagen-prod'>
                 <img src={imagen} alt="Producto" />
             </article>
@@ -18,6 +20,7 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
             </div>
             <div>
             <Link to={`/item/${id}`}><button className="btn">Ver producto</button></Link>
+            </div>
             </div>
 
             {/* <button className='boton-prod'>Ver Producto</button> */}
