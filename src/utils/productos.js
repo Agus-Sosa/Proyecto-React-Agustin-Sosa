@@ -56,7 +56,7 @@ export const data = [
         nombre: 'Samsung Galaxy S22',
         empresa: 'Samsung',
         precio: 786,
-        categoria: 2
+        categoria: 2,
     },
     {
         id: 8,
@@ -64,7 +64,7 @@ export const data = [
         nombre: 'Iphone 11',
         empresa: 'Apple',
         precio: 699,
-        categoria: 1
+        categoria: 1,
     },
     {
         id: 9,
@@ -72,7 +72,7 @@ export const data = [
         nombre: 'Iphone 12',
         empresa: 'Apple',
         precio: 979,
-        categoria: 1
+        categoria: 1,
     },
     {
         id: 10, 

@@ -186,7 +186,7 @@
     
 }
 .contenedor-carousel {
-    width: 85%;
+    width: 95%;
     margin: auto;
     overflow: hidden;
     height: 670px;
@@ -202,15 +202,52 @@
     align-items: flex-start;
 }
 
-@media screen and (max-width: 700px) {  
+@media screen and (max-width: 1280px) {
+    .contenedor-carousel {
+        height: auto;
+        width: auto;
+    }
+    .texto-portada {
+        top: 65%;
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {  
 
     .contenedor-imagen {
         background-size: 23pc;
         height: 500px;
     }
     .texto-portada {
-        top: 70%;
+        top: 55%;
+        font-size: 20px;
     }
 
     
+    .contenedor-carousel {
+        width: auto;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    
+    
+    .texto-portada {
+        
+    
+    }
+    .texto-portada h3 {
+        font-size: 20px;
+    }
+    .texto-portada a {
+        font-size: 17px;
+    }
+    .texto-portada svg {
+        font-size: 13px;
+        margin: 8px 0px;
+    }
 }
