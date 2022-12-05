@@ -45,15 +45,22 @@ const Itemlistcontainer = () =>{
             <div className="carousel w-full contenedor-carousel2">
     <div id="slide1" className="carousel-item relative w-full">
         <img src="https://epmgaa.media.clients.ellingtoncms.com/img/photos/2022/09/07/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907.jpg" className="w-full" />
+        <div className="texto-portada">
+            <p>Nuevo</p>
+            <h3>Iphone 14 Pro Max</h3>
+            <Link to={'item/1'}><a href="">Mas informacion<FiChevronRight/></a></Link>
+        </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide4" className="btn btn-circle">❮</a> 
         <a href="#slide2" className="btn btn-circle">❯</a>
         </div>
     </div> 
     <div id="slide2" className="carousel-item relative w-full">
-        <img src="https://img.global.news.samsung.com/in/wp-content/uploads/2022/02/S22_Ultra_Banner_3000x2000.jpg" className="w-full" />
-        <div>
-            <h3>Samsung S22</h3>
+        <img src="https://phantom-marca.unidadeditorial.es/740dde773d55709cdcf3be898842e109/resize/1320/f/jpg/assets/multimedia/imagenes/2022/02/09/16444119717845.jpg" className="w-full" />
+        <div className="texto-portada">
+            <p>Nuevo</p>
+            <h3>Samsung S22 Ultra</h3>
+            <Link to={'item/2'}><a href="">Mas informacion<FiChevronRight/></a></Link>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide1" className="btn btn-circle">❮</a> 
@@ -61,7 +68,12 @@ const Itemlistcontainer = () =>{
         </div>
     </div> 
     <div id="slide3" className="carousel-item relative w-full">
-        <img src="https://i01.appmifile.com/webfile/globalimg/products/m/xiaomi-11t/section3_video.jpg" className="w-full" />
+        <img src="https://www.techreviewer.de/wp-content/uploads/2021/09/xiaomi-11t-series-header.jpg" className="w-full" />
+        <div className="texto-portada">
+            <p>Nuevo</p>
+            <h3>Xiaomi T11 Pro</h3>
+            <Link to={'item/6'}><a href="">Mas informacion<FiChevronRight/></a></Link>
+        </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
         <a href="#slide2" className="btn btn-circle">❮</a> 
         <a href="#slide4" className="btn btn-circle">❯</a>
