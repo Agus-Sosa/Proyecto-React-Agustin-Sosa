@@ -16,7 +16,7 @@ const Itemlistcontainer = () =>{
     useEffect(() =>{
         if(categoriaId) {
 
-            fetchData(2000, data.filter(item => item.categoria === parseInt(categoriaId)))
+            fetchData(2000, data.filter(item => item.empresa === categoriaId))
             .then(response => setDatos(response))
             .catch(error => console.log(error))
         } else {
