@@ -9,7 +9,7 @@ import { AiOutlineLeft } from 'react-icons/ai'
 const Cart = () => {
     const { listaCarrito } = useContext(CartContext);
     const { eliminarProducto } = useContext(CartContext)
-
+    const {eliminarCarrito} = useContext(CartContext)
 
     return (
         <>
@@ -27,7 +27,7 @@ const Cart = () => {
                         </div>
                         : <div className='contenedor-botones-carrito '>
                         <Link to={'/'}><span><AiOutlineLeft/>Volver A inicio</span></Link>
-                        <button>Eliminar Carrito</button>
+                        <button onClick={() => {eliminarCarrito()}}>Eliminar Carrito</button>
                     </div>
                 }
                 </>
@@ -37,6 +37,7 @@ const Cart = () => {
             listaCarrito.length === 0
             ? <div className='contenedor-carrito-vacio'>
                 <div className='carrito-vacio'>
+                    <img src="https://enigma.uy/img/mini-empty-cart.png" alt="" />
                 <h3>Tu Carrito Esta vacio</h3>
                 <Link to={'/'}>
                     <button className='btn'>Ir al inicio <AiOutlineRight/></button>
@@ -56,7 +57,7 @@ const Cart = () => {
                     </div>
                 <div className='contenedor-detalle-precio'>
                     <p>${item.precio}</p>
-                    <button class="btn btn-sm">Eliminar</button>
+                    <button class="btn btn-sm" onClick={() => eliminarProducto(item.id)}>Eliminar</button>
                 </div>
                 </div>
                 </>

@@ -64,12 +64,15 @@ h1 {
     display: flex;
     justify-content: center;
     color: black;
+    height: 100%;
+    overflow: hidden;
+    padding: 4pc;
 }
 
 
 .carrito-vacio {
-    background-color: none;
-    padding: 10pc;
+    display: grid;
+    justify-items: center;
 }
 
 .carrito-vacio h3 {
@@ -77,9 +80,19 @@ h1 {
 }
 
 
+.carrito-vacio img {
+    width: 24pc;
+}
+
 .carrito-vacio button {
     border: solid black;
     margin: 24px 65px;
+    transition: .5s all;
+}
+
+
+.carrito-vacio button:hover {
+    color: white;
 }
 
 
