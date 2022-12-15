@@ -120,10 +120,27 @@
     width: 292px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: rgba(249, 249, 249, 1);
-    border-radius: 10px;
     color: black;
     transition: .6s all;
 
+}
+.contenedor-ver-prod {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-img {
+    background-color: whitesmoke;
+}
+
+.contenedor-precio {
+    display: inline-flex;
+
+}
+
+.contenedor-precio p {
+    margin: 19px;
+    font-size: 24px;
 }
 
 .card-prod:hover {
@@ -138,6 +155,10 @@
 
 .imagen-prod img{
     width: 100%;
+}
+
+.nombre-prod {
+    font-weight: bold;
 }
 
 .informacion-prod p {
@@ -206,7 +227,9 @@
     .contenedor-carousel {
         height: auto;
         width: auto;
+        border-radius: 0px;
     }
+
     .texto-portada {
         top: 65%;
         font-size: 20px;
@@ -215,6 +238,8 @@
 
 
 @media screen and (max-width: 800px) {  
+
+
 
     .contenedor-imagen {
         background-size: 23pc;
@@ -229,13 +254,20 @@
     .contenedor-carousel {
         width: auto;
         height: auto;
+        border-radius: 0px;
     }
+
 
 }
 
 @media screen and (max-width: 640px) {
     
     
+    .card-prod {
+        margin: 10px 8px;
+        width: 286px;
+    }
+
     .contenedor-carousel {
         border-radius: 0px;
     }

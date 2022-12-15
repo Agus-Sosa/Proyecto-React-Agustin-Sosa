@@ -6,6 +6,7 @@ export const data = [
         empresa: 'Apple',
         precio: 1.099,
         categoria: 1,
+        stock: 40,
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const data = [
         empresa: 'Samsung',
         precio: 1.199,
         categoria: 2,
+        stock: 20,
 
     },
     {
@@ -23,6 +25,7 @@ export const data = [
         empresa: 'Apple',
         precio: 129.99,
         categoria: 1,
+        stock: 15,
 
     },
     {
@@ -31,7 +34,8 @@ export const data = [
         nombre: 'Xiaomi Redmi Note 11 Pro',
         empresa: 'Xiaomi',
         precio: 269.99,
-        categoria: 3
+        categoria: 3,
+        stock: 20
     },
     {
         id: 5,
@@ -39,16 +43,19 @@ export const data = [
         nombre: 'Iphone SE',
         empresa: 'Apple',
         precio: 399.99,
-        categoria: 1
+        categoria: 1,
+        stock: 50,
     },
     
     {
         id: 6,
         imagen: 'https://fixechelectronica.com.ar/wp-content/uploads/2022/04/MI-11-T-8.png',
-        nombre: 'Xiaomi 11T',
+        nombre: 'Xiaomi 11T Pro',
         empresa: 'Xiaomi',
         precio: 554,
         categoria: 3,
+        stock: 5
+
     },   
     {
         id: 7,
@@ -57,6 +64,8 @@ export const data = [
         empresa: 'Samsung',
         precio: 786,
         categoria: 2,
+        stock: 18,
+
     },
     {
         id: 8,
@@ -65,6 +74,7 @@ export const data = [
         empresa: 'Apple',
         precio: 699,
         categoria: 1,
+        stock: 40,
     },
     {
         id: 9,
@@ -73,6 +83,8 @@ export const data = [
         empresa: 'Apple',
         precio: 979,
         categoria: 1,
+        stock: 10
+
     },
     {
         id: 10, 
@@ -81,6 +93,8 @@ export const data = [
         empresa: 'Samsung',
         precio: 139,
         categoria: 2,
+        stock: 17,
+
     } 
 
 ]

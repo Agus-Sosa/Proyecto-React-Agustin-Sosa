@@ -7,7 +7,7 @@
 .contenedor-detalle {
     display: flex;
     border-radius: 10px;
-    margin: 40px;
+    margin: 50px;
 }
 
 .contenedor-article {
@@ -40,31 +40,143 @@
     font-weight: bold;
 }
 
-.contenedor-item_info p:nth-child(2) {
+.contenedor-item_info .empresa {
     font-size: 25px;
-    font-weight: 300;
+    font-weight: 400;
 }
-.contenedor-item_info p:nth-child(3){
+.contenedor-item_info .parrafo-detalles{
     font-size: 20px;
     margin: 10px 0px;
 }
 
-.contenedor-botones {
+
+
+
+.contenedor-precio-stock span {
+    padding: 1px;
+    background-color: gray;
+    margin: 5px;
+    transition: 1s all;
+}
+
+.contenedor-botones span svg {
+    font-size: 15px;
+    margin: 10px 0px;
+    display: flex;
+    align-self: center;
+}
+
+.contenedor-botones span:hover {
+    text-decoration-line: underline;
+}
+
+
+
+.contenedor-precio-stock {
     display: flex;
     justify-content: center;
 }
-
 .precio {
-    font-size: 50px;
-    font-weight: 100;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+.stock {
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .contenedor-item_info button {
     color: white;
     background: black;
+    
+    border: solid 2px;
     margin: 20px 0px;
+    display: flex;
+    margin: auto;
 }
 
 .contenedor-item_info button svg {
     margin: auto;
+}
+
+
+.contenedor-contador {
+    display: flex;
+    margin: 10px 45px;
+    border: solid 1px;
+
+    
+}
+
+.contenedor-contador button {
+    background: none;
+    border: none;
+    font-size: 30px;
+}
+
+.contenedor-contador span {
+
+    font-size: 20px;
+}
+
+.boton-carrito-2 {
+    color: black;
+}
+
+.contenedor-botones span {
+    display: flex;
+    justify-content: center;
+    margin: 14px 0px;
+    font-size: 20px;
+}
+
+
+
+
+@media screen and (max-width: 720px){
+    .contenedor-detalle {
+        display: block;
+
+    }
+    .contenedor-item_info {
+        width: 100%;
+        padding: 20px;
+
+    }
+    .contenedor-item_info h4 {
+        font-size: 20px;
+    }
+    .contenedor-item_info .empresa  {
+        font-size: 15px;
+    }
+    .contenedor-item_info .parrafo-detalles{
+        font-size: 15px;
+    }
+    .precio {
+        font-size: 20px;
+    }
+
+    .contenedor-precio-stock .stock {
+        font-size: 20px;
+    }
+
+    .contenedor-article article img {
+        width: 300px;
+    }   
+    .contenedor-botones button {
+        line-height: 0px;
+        padding: 30px;
+        width: 100%;
+    }
+    
+    .contenedor-contador {
+        border: solid 1px;
+        
+    }
+    .contenedor-contador button {
+        padding: 0px;
+        font-size: 20px;
+    }
 }

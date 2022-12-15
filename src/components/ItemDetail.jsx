@@ -1,10 +1,35 @@
 
-import { data } from "../utils/Productos";
-import {GiShoppingBag} from 'react-icons/gi'
+
 import './detail.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ItemCount from "./ItemCount";
+import { CartContext } from "./context/CartContext";
+import { Link } from "react-router-dom";
+import { AiOutlineRight } from 'react-icons/ai'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { AiOutlineLeft } from 'react-icons/ai'
+
+
 const ItemDetail = ({item}) =>{
-    const [unidades, setUnidades] = useState()
+    const [itemCount, setItemCount] = useState(0)
+    const {agregarAlCarrito} = useContext(CartContext)
+
+    const onAdd = (qty) => {
+        toast('Se Agregaron ' + qty + ' unidades al carrito', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+        setItemCount(qty);
+        agregarAlCarrito(item, qty);
+    }
+
     return (
         <>
         {
@@ -21,14 +46,28 @@ const ItemDetail = ({item}) =>{
             <div data-aos="fade-left">
 
                 <h4>{item.nombre}</h4>
-                <p>{item.empresa}</p>
-
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eaque commodi et quam. Commodi sed nulla doloribus nostrum neque necessitatibus doloremque ad temporibus maxime in eaque obcaecati, facilis inventore earum!</p>
+                <p className="empresa">{item.empresa}</p>
                 <p className="precio">${item.precio}</p>
+                <p className="stock">stock: {item.stock}</p>
+
+                <p className="parrafo-detalles">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Aliquam eaque commodi et quam. 
+                Commodi sed nulla doloribus nostrum neque necessitatibus doloremque ad temporibus maxime in eaque obcaecati, 
+                facilis inventore earum!</p>
 
                 <hr />
                 <div className="contenedor-botones">
-                <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Agregar al carrito</button>
+                    {
+                        itemCount === 0
+                        ? <ItemCount stock={item.stock} inicial={itemCount} onAdd={onAdd} />
+                        :<>
+                        <Link to='/carrito'><span>Ir a carrito<AiOutlineRight/></span></Link>
+                        <Link to='/'><span><AiOutlineLeft/>Volver a inicio</span></Link>
+                        </>
+        
+                    }
+                        {/* <ItemCount stock={item.stock} inicial={itemCount} onAdd={onAdd} />                         */}
+                    
                 </div>
             </div>
             </div>
@@ -40,6 +79,8 @@ const ItemDetail = ({item}) =>{
             </div>
 
             }
+
+        <ToastContainer/>
         </>
     )
 }
