@@ -4,7 +4,7 @@ export const data = [
         imagen: 'https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662655728/Croma%20Assets/Communication/Mobiles/Images/261978_zs5j6h.png/mxw_640,f_auto',
         nombre: 'Iphone 14 Pro Max',
         empresa: 'Apple',
-        precio: 1.099,
+        precio: 1099,
         categoria: 1,
         stock: 40,
     },
@@ -13,7 +13,7 @@ export const data = [
         imagen: 'https://www.bairesit.com.ar/Image/0/750_750-sm-s908_galaxys22ultra_devicepenback_phantomwhite_211119.png',
         nombre: 'Samsung Galaxy S22 Ultra',
         empresa: 'Samsung',
-        precio: 1.199,
+        precio: 1199,
         categoria: 2,
         stock: 20,
 

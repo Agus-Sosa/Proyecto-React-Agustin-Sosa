@@ -101,10 +101,16 @@ h1 {
     padding: 24px;
     width: 500px;
     color: black;
-    display: flex;
-    height: 31.5pc;
-    justify-content: center;
+    height: 25pc;
     box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+
+.contenedor-caja-compra h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    border-bottom: solid 1px;
+    font-size: 30px;
 }
 
 
@@ -191,6 +197,58 @@ h1 {
 .contenedor-botones-carrito span svg {
     margin: auto;
 
+}
+
+.contenedor-botones-carrito p {
+    color: black;
+    font-size: 20px;
+}
+
+.contenedor-precios-resumen {
+    font-size: 20px;
+    height: 50%;
+    display: grid;
+    justify-items: stretch;
+    align-items: center;
+    border-bottom: solid 1px;
+}
+
+.contenedor-precios-resumen p {
+    margin: auto;
+    font-weight: bold;
+}
+
+.contenedor-subtotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-impuestos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-costo-envio {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-precio-total {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contenedor-precio-total span {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.boton-comprar {
+    margin: auto;
+    width: 100%;
+    color: white;
 }
 
 /* .contenedor-cart-productos {

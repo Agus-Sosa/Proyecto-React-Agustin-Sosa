@@ -10,7 +10,9 @@ const Cart = () => {
     const { listaCarrito } = useContext(CartContext);
     const { eliminarProducto } = useContext(CartContext)
     const {eliminarCarrito} = useContext(CartContext)
-
+    const {calcularPrecioTotal} = useContext(CartContext)
+    const {calcularImpuestos} = useContext(CartContext)
+    const { precioTotal } = useContext(CartContext)
     return (
         <>
         <h1>Carrito</h1> 
@@ -26,8 +28,7 @@ const Cart = () => {
                             <button className='btn-small'>Elminar Carrito</button>
                         </div>
                         : <div className='contenedor-botones-carrito '>
-                        <Link to={'/'}><span><AiOutlineLeft/>Volver A inicio</span></Link>
-                        <button onClick={() => {eliminarCarrito()}}>Eliminar Carrito</button>
+                        <Link to={'/'}><span><AiOutlineLeft/>Volver A inicio</span></Link> | <p>Productos</p> | <button onClick={() => {eliminarCarrito()}}>Eliminar Carrito</button>
                     </div>
                 }
                 </>
@@ -72,6 +73,25 @@ const Cart = () => {
                     </div>
                 :   <div className='contenedor-caja-compra'>
                         <h3>Resumen</h3>
+                            <div className='contenedor-precios-resumen'>
+                                <div className='contenedor-subtotal'>
+                                    <span>Subtotal</span> 
+                                    <span>US${calcularPrecioTotal() || 0}</span>
+                                </div>
+                                <div className='contenedor-impuestos'>
+                                    <span>Impuestos</span>
+                                    <span>US${calcularImpuestos() || 0}</span>
+                                </div>
+                                <div className='contenedor-costo-envio'>
+                                    <span>Envio</span>
+                                    <span>US$5</span>
+                                </div>
+                                </div>
+                            <div className='contenedor-precio-total'>
+                                <span>Total</span>
+                                <span>US${precioTotal() || 0}</span>
+                        </div>
+                        <button className='btn boton-comprar'>Comprar</button>
                     </div>
             }
             </div>

@@ -23,7 +23,7 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria}) => {
             <div className='contenedor-ver-prod'>
             <Link to={`/item/${id}`}><button className="btn">Ver producto</button></Link>
             <div className='contenedor-precio'>
-            <p className='precio-prod'>${precio}</p>
+            <p className='precio-prod'>US${precio}</p>
             </div>
             </div>
             

@@ -47,7 +47,7 @@ const ItemDetail = ({item}) =>{
 
                 <h4>{item.nombre}</h4>
                 <p className="empresa">{item.empresa}</p>
-                <p className="precio">${item.precio}</p>
+                <p className="precio">US${item.precio}</p>
                 <p className="stock">stock: {item.stock}</p>
 
                 <p className="parrafo-detalles">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
