@@ -258,3 +258,19 @@ h1 {
 .contenedor-cart-productos table {
     margin: auto;
 } */
+
+
+@media screen and (max-width: 1160px) {
+    .contenedor-cart {
+        display: block;
+    }
+    .contenedor-caja-compra {
+        width: auto;
+        margin: 10px 12px;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    
+}

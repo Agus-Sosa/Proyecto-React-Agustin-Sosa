@@ -4,7 +4,8 @@ import { CartContext } from './context/CartContext';
 import {AiOutlineRight} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai'
-
+import { serverTimestamp, setDoc, doc, collection, updateDoc, increment } from 'firebase/firestore';
+import {db} from '../utils/firebaseConfig'
 
 const Cart = () => {
     const { listaCarrito } = useContext(CartContext);
@@ -13,6 +14,50 @@ const Cart = () => {
     const {calcularPrecioTotal} = useContext(CartContext)
     const {calcularImpuestos} = useContext(CartContext)
     const { precioTotal } = useContext(CartContext)
+    
+    
+    const botonAgregarOrden = () => {
+        const orden = {
+        buyer: {
+            name: 'Agustin Sosa',
+            phone: '341-1111-111',
+            email: 'agus31@gmail.com'
+            },
+            dato: serverTimestamp() , 
+            item: listaCarrito.map(item => ({
+                id: item.id,
+                title: item.nombre ,
+                price: item.precio,
+                qty: item.qty
+            })),
+            
+            total: precioTotal(),
+        }
+        console.log(orden)
+        const agregarOrdenFireStore = async() =>{
+            const nuevaOrdenRef = doc(collection(db, 'orden'))
+            await setDoc(nuevaOrdenRef, orden);
+            return nuevaOrdenRef
+        }
+        agregarOrdenFireStore()
+        .then(resultado => {
+            alert('orden' + resultado.id)
+            listaCarrito.forEach(async(item) => {
+                const itemRef = doc(db, "Productos", item.id);
+                    await updateDoc(itemRef, {
+
+                    stock: increment(-item.qty)
+                });
+            });
+            eliminarCarrito()
+        })
+        .catch(error => console.log(error))
+
+
+        
+    }
+    
+    
     return (
         <>
         <h1>Carrito</h1> 
@@ -91,7 +136,7 @@ const Cart = () => {
                                 <span>Total</span>
                                 <span>US${precioTotal() || 0}</span>
                         </div>
-                        <button className='btn boton-comprar'>Comprar</button>
+                        <button className='btn boton-comprar' onClick={botonAgregarOrden}>Comprar</button>
                     </div>
             }
             </div>

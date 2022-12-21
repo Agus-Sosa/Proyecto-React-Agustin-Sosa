@@ -49,29 +49,13 @@ const CartContextProvider = ({children}) => {
     }
 
     const eliminarCarrito = () => {
-        Swal.fire({
-            title: '¿Estas Seguro?',
-            text: "No podras revertir esto!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            cancelButtonText: 'Cancelar',
-            confirmButtonText: 'Si, Eliminar!'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                Swal.fire(
-                    'Eliminado!',
-                    'Su Carrito fue eliminado con exito.',
-                    'success'
-                )
                 setListaCarrito([])
-                }
-            })
+                
+            
     }
 
     const CalcularProductoCarrito = () => {
-        let productos = listaCarrito.map(item => item.id)
+        let productos = listaCarrito.map(item => item.qty)
         return productos.reduce(((acumulador, itemActual) => acumulador + itemActual), 0 );
     }
 

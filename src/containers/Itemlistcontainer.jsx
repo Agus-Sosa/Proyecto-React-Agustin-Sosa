@@ -1,12 +1,11 @@
-import Item from "../components/Item";
-import { data } from "../utils/Productos"
 import AOS from 'aos';
 import {FiChevronRight} from 'react-icons/fi'
 import Itemlist from "../components/Itemlist";
 import '../components/home.css'
-import { fetchData } from "../utils/fetch-data";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
+import { db } from "../utils/firebaseConfig";
 import { Link } from "react-router-dom";
 
 const Itemlistcontainer = () =>{
@@ -14,16 +13,36 @@ const Itemlistcontainer = () =>{
     const {categoriaId} = useParams();
 
     useEffect(() =>{
-        if(categoriaId) {
+        // if(categoriaId) {
 
-            fetchData(2000, data.filter(item => item.empresa === categoriaId))
-            .then(response => setDatos(response))
-            .catch(error => console.log(error))
-        } else {
-            fetchData(2000, data)
-            .then(response => setDatos(response))
-            .catch(error => console.log(error))
+        //     fetchData(2000, data.filter(item => item.empresa === categoriaId))
+        //     .then(response => setDatos(response))
+        //     .catch(error => console.log(error))
+        // } else {
+        //     fetchData(2000, data)
+        //     .then(response => setDatos(response))
+        //     .catch(error => console.log(error))
+        // }
+        const fetchFireStore = async() => {
+            let q;
+
+            if(categoriaId) {
+                q = query(collection(db, "Productos"), where('empresa', '==', categoriaId))
+            } else {
+
+                q = query(collection(db, "Productos"), orderBy('precio', 'desc'))
+            }
+
+            const querySnapshot = await getDocs(q);
+            const datosFireStore = querySnapshot.docs.map(item => ({
+                id: item.id,
+                ...item.data()
+            }))
+            return datosFireStore;
         }
+        fetchFireStore()
+        .then(resultado => setDatos(resultado))
+        .catch(error => console.log(error))
     }, [categoriaId])
     return (
         <>
