@@ -17,7 +17,7 @@
 
 .contenedor-portada-1 {
     display: grid;
-    grid-template-columns: 44.5pc 27pc;
+    grid-template-columns: 45pc 27.5pc;
     grid-template-rows: repeat(1, 23pc);
     grid-column-gap: 14px;
     grid-row-gap: 0px;

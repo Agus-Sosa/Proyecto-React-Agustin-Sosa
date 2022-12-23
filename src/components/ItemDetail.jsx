@@ -46,32 +46,36 @@ const ItemDetail = ({item}) =>{
             <div data-aos="fade-left">
 
                 <h4>{item.nombre}</h4>
-                <p className="empresa">{item.empresa}</p>
                 <p className="precio">US${item.precio}</p>
-                <p className="stock">stock: {item.stock}</p>
-                <h6>Descripcion:</h6>
+                <hr />
                 <p className="parrafo-detalles">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Aliquam eaque commodi et quam. 
                 Commodi sed nulla doloribus nostrum neque necessitatibus doloremque ad temporibus maxime in eaque obcaecati, 
                 facilis inventore earum!</p>
 
-                <hr />
+                    <p className='stock-info'>Stock {item.stock}</p>
                 <div className="contenedor-botones">
                     {
+                        
                         itemCount === 0
                         ? <ItemCount stock={item.stock} inicial={itemCount} onAdd={onAdd} />
                         :<>
                         <Link to='/carrito'><span>Ir a carrito<AiOutlineRight/></span></Link>
-                        <Link to='/'><span><AiOutlineLeft/>Volver a inicio</span></Link>
+                        
                         </>
         
                     }
                         {/* <ItemCount stock={item.stock} inicial={itemCount} onAdd={onAdd} />                         */}
                     
                 </div>
+                <hr />
+                <div className='empresa-info'>
+                <p>Empresa: <span>{item.empresa}</span></p>
+                </div>
             </div>
             </div>
         </div>
+        
 
         :   <div className="contenedor-carga">
             <progress className="progress w-56 carga" ></progress>
@@ -79,7 +83,6 @@ const ItemDetail = ({item}) =>{
             </div>
 
             }
-
         <ToastContainer/>
         </>
     )
