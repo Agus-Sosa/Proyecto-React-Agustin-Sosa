@@ -49,7 +49,7 @@ const ItemDetail = ({item}) =>{
                 <p className="empresa">{item.empresa}</p>
                 <p className="precio">US${item.precio}</p>
                 <p className="stock">stock: {item.stock}</p>
-
+                <h6>Descripcion:</h6>
                 <p className="parrafo-detalles">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                 Aliquam eaque commodi et quam. 
                 Commodi sed nulla doloribus nostrum neque necessitatibus doloremque ad temporibus maxime in eaque obcaecati, 

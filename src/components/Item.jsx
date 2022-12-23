@@ -15,11 +15,11 @@ const Item = ({id, imagen, nombre, empresa, precio, categoria, }) => {
                 <img src={imagen} alt="Producto" />
             </article>
             </div>
-            <hr />
             <div className='informacion-prod'>
                 <p className='nombre-prod'>{nombre}</p>
                 <p className='nombre-empresa'>{empresa}</p>
             </div>
+            <hr />
             <div className='contenedor-ver-prod'>
             <Link to={`/item/${id}`}><button className="btn">Ver producto</button></Link>
             <div className='contenedor-precio'>

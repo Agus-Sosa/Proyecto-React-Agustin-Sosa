@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/samsung-sans-4');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Samsung Sans', sans-serif;
+                                                
 }
 
 body {

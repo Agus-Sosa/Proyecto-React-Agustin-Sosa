@@ -28,11 +28,14 @@ const ItemCount = ({inicial = 1, stock= 0, onAdd}) => {
 
     return (
         <>
+        <section className='contenedor-count'>
+        <p>Cantidad</p>
     <div className='contenedor-contador'>
     <button onClick={aumentar}><GrFormAdd/></button>
     <span>{count}</span>
     <button onClick={disminuir}><GrFormSubtract/></button>
     </div>
+    </section>
         {
             stock && count  
             ? <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" onClick={()=> onAdd(count) }>Agregar al carrito</button>

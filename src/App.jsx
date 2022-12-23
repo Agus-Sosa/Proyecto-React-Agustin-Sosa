@@ -1,6 +1,6 @@
 import Header from "./components/Header";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Itemlistcontainer from "./containers/Itemlistcontainer";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
