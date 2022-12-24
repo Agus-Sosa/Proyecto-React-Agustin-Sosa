@@ -54,3 +54,13 @@
 .contenedor-copyright span {
     margin: 10px auto;
 }
+
+.scroll-to-top {
+    border-radius: 28px ;
+    
+
+}
+
+.scroll-to-top svg {
+    margin: auto;
+}

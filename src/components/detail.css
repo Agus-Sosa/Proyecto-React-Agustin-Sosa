@@ -8,6 +8,7 @@
     display: flex;
     border-radius: 10px;
     margin: 50px;
+    margin-top: 0px;
 }
 
 .contenedor-article {
@@ -83,6 +84,11 @@
 }
 .empresa-info span {
     font-weight: 100;
+    color:  #007185;
+}
+
+.empresa-info span:hover {
+    text-decoration-line: underline ;
 }
 
 
@@ -183,23 +189,86 @@
     font-size: 20px;
 }
 
+
+
 .contenedor-item_info h6 {
     font-weight: bold;
     margin: 5px 0px;
     font-size: 20px;
 }
 
+.contenedor-compartir {
+    margin: 18px 0px;
+}
+
+.contenedor-compartir h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0px;
+
+}
+
+.ir-a-carrito {
+    display: flex;
+
+}
 
 
-@media screen and (max-width: 720px){
+.botones-compartir {
+    display: flex;
+
+}
+
+.botones-compartir a {
+    margin-right: 20px;
+    border: solid;
+    border-radius: 5px;
+    font-size: 17px ;
+    color: gray;
+    transition: .5s all;
+}
+
+
+/* .botones-compartir a:nth-child(1){
+    color: gray;
+}
+
+.botones-compartir a:nth-child(2) {
+    color: gray;
+}
+
+.botones-compartir a:nth-child(3) {
+    color: gray; */
+
+.botones-compartir a:hover {
+    color: black;
+}
+
+
+.botones-compartir a svg {
+    margin: 8px;
+}
+
+
+.contenedor-nav-detail {
+    color: gray;
+    margin: 50px 33px 14px 79px;
+}
+
+.contenedor-nav-detail span:nth-child(3) {
+    color: black;
+}
+
+
+
+@media screen and (max-width: 950px){
     .contenedor-detalle {
         display: block;
 
     }
     .contenedor-item_info {
         width: 100%;
-        padding: 20px;
-
+        margin-top: 20px;
     }
     .contenedor-item_info h4 {
         font-size: 20px;
@@ -219,18 +288,16 @@
     }
 
     .contenedor-article article img {
+        min-width: 200px;
         width: 300px;
     }   
     .contenedor-botones button {
         line-height: 0px;
-        padding: 30px;
-        width: 100%;
-    }
+        }
     
     .contenedor-contador button {
-        padding: 0px;
-        background: none
-        ;
+        background: none;
+        padding: 12px;
         font-size: 20px;
     }
 }

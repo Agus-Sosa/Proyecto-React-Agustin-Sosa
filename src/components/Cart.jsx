@@ -98,7 +98,7 @@ const Cart = () => {
                     </article>
                     <div className='contenedor-detalles'>
                     <h2>{item.nombre}</h2>
-                    <span>{item.empresa}</span>
+                    
                     <p>Cantidad: {item.qty}</p>
                     </div>
                 <div className='contenedor-detalle-precio'>

@@ -33,9 +33,12 @@ const ItemDetailContainer = () =>{
     },[])
     
     return (
+        <>
         <div className="contenedor-item">
         <ItemDetail item={dato}/>
         </div>
+        
+        </>
     )
 }
 

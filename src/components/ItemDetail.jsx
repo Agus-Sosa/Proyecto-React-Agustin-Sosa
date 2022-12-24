@@ -9,6 +9,8 @@ import { AiOutlineRight } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AiOutlineLeft } from 'react-icons/ai'
+import { ImFacebook, ImTwitter, ImWhatsapp, ImInstagram } from 'react-icons/im'
+import { AiOutlineInstagram } from 'react-icons/ai'
 
 
 const ItemDetail = ({item}) =>{
@@ -32,6 +34,9 @@ const ItemDetail = ({item}) =>{
 
     return (
         <>
+        <div className='contenedor-nav-detail'>
+            <Link to={'/'}><span>Inicio</span></Link> / <Link to={`/categoria/${item.empresa}`}> <span>{item.empresa}</span></Link> / <span>{item.nombre}</span>
+        </div>
         {
             item && item.imagen ?
             <div className="contenedor-detalle">
@@ -60,7 +65,7 @@ const ItemDetail = ({item}) =>{
                         itemCount === 0
                         ? <ItemCount stock={item.stock} inicial={itemCount} onAdd={onAdd} />
                         :<>
-                        <Link to='/carrito'><span>Ir a carrito<AiOutlineRight/></span></Link>
+                        <Link to='/carrito'><button className='ir-a-carrito btn'>Ir a carrito<AiOutlineRight/></button></Link>
                         
                         </>
         
@@ -70,7 +75,16 @@ const ItemDetail = ({item}) =>{
                 </div>
                 <hr />
                 <div className='empresa-info'>
-                <p>Empresa: <span>{item.empresa}</span></p>
+                <p>Empresa:<Link to={`/categoria/${item.empresa}`}> <span>{item.empresa}</span></Link></p>
+                </div>
+                <div className='contenedor-compartir'>
+                    <h5>Compartir</h5>
+                    <div className='botones-compartir'>
+                    <a href=""><ImFacebook/></a>
+                    <a href=""><ImInstagram/></a>
+                    <a href=""><ImTwitter/></a>
+                    <a href=""><ImWhatsapp/></a>
+                    </div>
                 </div>
             </div>
             </div>

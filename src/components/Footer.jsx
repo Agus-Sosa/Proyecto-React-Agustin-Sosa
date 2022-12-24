@@ -1,14 +1,13 @@
 
-import {FaTwitter} from "react-icons/fa"
-import {SiFacebookgaming} from 'react-icons/si'
-import {CgInstagram} from 'react-icons/cg'
+
 import { AiFillGithub} from 'react-icons/ai'
+import ScrollToTop from "react-scroll-to-top";
 import './footer.css'
 const Footer = () =>{
 
     return (
         <>
-        
+        <ScrollToTop smooth top='40'  className='scroll-to-top'/>
         <footer className="footer items-center p-4 text-neutral-content">
                 <div className="items-center grid-flow-col">
                     <span className="icono-github"><AiFillGithub/></span>

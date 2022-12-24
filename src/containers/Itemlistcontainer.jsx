@@ -38,23 +38,6 @@ const Itemlistcontainer = () =>{
     return (
         <>
         <Portada/>
-        <section className='contenedor-servicios'>
-            <div>
-            <img src="https://img.icons8.com/pastel-glyph/512/fast-cart.png" alt="" />
-            <p>Entrega dentro de las 48hs</p>
-            </div>
-            <div>
-            <img src="https://static.thenounproject.com/png/284886-200.png" alt="" />
-            <p>Seguimiento en linea</p>
-            </div>
-            <div>
-                <img src="https://cdn-icons-png.flaticon.com/512/81/81117.png" alt="" />
-                <p>Soporte las 24hs</p>
-            </div>
-        </section>
-        <div className='titulo-productos'>
-            <h1>Productos Destacados</h1>
-        </div> 
         <div className="contenedor-card">
             
         <Itemlist item={datos}/>
