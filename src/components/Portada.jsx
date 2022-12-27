@@ -1,10 +1,10 @@
 import React from 'react'
-import {AiOutlineRight} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 const Portada = () => {
     return (
         <>
+        
         <section className='contenedor-portada-1 flex-wrap'>
             <div className='contenedor-primera-portada '>
                 <div>
@@ -35,15 +35,6 @@ const Portada = () => {
                 <Link to={'/item/8w8FHfE9XYdIsiLrhwr5'}><button>Comprar</button></Link>
                 </div>
             </div>
-            {/* <div className='contenedor-cuarta-portada'>
-                <div>
-                    <img src="https://www.apple.com/v/airpods-2nd-generation/e/images/meta/og__bz8g5g9sbyoi_overview.png?202212201350" alt="" />
-                </div>
-                <div className='info-portada-4'>
-                <p>Airpods 2</p>
-                <span>Mas informacion</span>
-                </div>
-            </div> */}
         </section>
         <section className='contenedor-servicios'>
             <div>

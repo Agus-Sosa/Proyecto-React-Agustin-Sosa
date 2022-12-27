@@ -4,8 +4,10 @@ import { CartContext } from './context/CartContext';
 import {AiOutlineRight} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai'
+import Swal from 'sweetalert2'
 import { serverTimestamp, setDoc, doc, collection, updateDoc, increment } from 'firebase/firestore';
 import {db} from '../utils/firebaseConfig'
+import { useState } from 'react';
 
 const Cart = () => {
     const { listaCarrito } = useContext(CartContext);
@@ -14,8 +16,18 @@ const Cart = () => {
     const {calcularPrecioTotal} = useContext(CartContext)
     const {calcularImpuestos} = useContext(CartContext)
     const { precioTotal } = useContext(CartContext)
+    const [codigo, setCodigo] = useState()
     
-    
+
+    const CodigoDescuento = (valorInput) =>{
+        if(valorInput  === 'Navidad') {
+         let descuento =  precioTotal() * 0.50; 
+            setCodigo(descuento)
+        }else {
+
+        }
+    }
+
     const botonAgregarOrden = () => {
         const orden = {
         buyer: {
@@ -41,7 +53,14 @@ const Cart = () => {
         }
         agregarOrdenFireStore()
         .then(resultado => {
-            alert('orden' + resultado.id)
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Compra Realizada con exito',
+                text: ` Orden de compra  ${resultado.id }`,
+                showConfirmButton: false,
+                timer: 1500
+            })
             listaCarrito.forEach(async(item) => {
                 const itemRef = doc(db, "Productos", item.id);
                     await updateDoc(itemRef, {
@@ -110,6 +129,29 @@ const Cart = () => {
             )
         }
         </div>
+        
+        {
+            listaCarrito.length > 0 
+            ? <div className='contenedor-input-codigos'>
+                <form 
+                onSubmit={ev =>{
+                    ev.preventDefault();
+                    const ValorCodigo = ev.target.descuento.value
+                    CodigoDescuento(ValorCodigo)
+                }}
+                >
+                    <div className='cartel-descuento'>
+                    <span>Coloque Navidad para un 50%</span>
+                    </div>
+                    <input type="text" autoFocus='off' autoComplete='off' name='descuento' placeholder='Colocar codigo' className='input input-bordered w-full max-w-xs'  />
+                    <button  type={'submit'} >Aceptar</button>
+                    </form>
+                    {
+                        console.log(CodigoDescuento())
+                    }
+            </div>
+            : <div className='contenedor-input-codigos hidden'></div>
+        }
             </div>
             {
                 listaCarrito.length == 0
@@ -124,17 +166,21 @@ const Cart = () => {
                                     <span>US${calcularPrecioTotal() || 0}</span>
                                 </div>
                                 <div className='contenedor-impuestos'>
-                                    <span>Impuestos</span>
+                                    <span>Impuestos (64%)</span>
                                     <span>US${calcularImpuestos() || 0}</span>
                                 </div>
                                 <div className='contenedor-costo-envio'>
                                     <span>Envio</span>
                                     <span>US$5</span>
                                 </div>
+                                <div className='contenedor-descuento'>
+                                <span>Descuento</span>
+                                <span id='descuento'></span>
+                                </div>
                                 </div>
                             <div className='contenedor-precio-total'>
                                 <span>Total</span>
-                                <span>US${precioTotal() || 0}</span>
+                                <span>US${codigo || precioTotal()}</span>
                         </div>
                         <button className='btn boton-comprar' onClick={botonAgregarOrden}>Comprar</button>
                     </div>
