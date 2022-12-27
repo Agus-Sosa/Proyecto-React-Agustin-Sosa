@@ -13,7 +13,7 @@ const Cart = () => {
     const { listaCarrito } = useContext(CartContext);
     const { eliminarProducto } = useContext(CartContext)
     const {eliminarCarrito} = useContext(CartContext)
-    const {calcularPrecioTotal} = useContext(CartContext)
+    const {calcularSubTotal} = useContext(CartContext)
     const {calcularImpuestos} = useContext(CartContext)
     const { precioTotal } = useContext(CartContext)
     const [codigo, setCodigo] = useState()
@@ -45,7 +45,6 @@ const Cart = () => {
             
             total: precioTotal(),
         }
-        console.log(orden)
         const agregarOrdenFireStore = async() =>{
             const nuevaOrdenRef = doc(collection(db, 'orden'))
             await setDoc(nuevaOrdenRef, orden);
@@ -141,14 +140,11 @@ const Cart = () => {
                 }}
                 >
                     <div className='cartel-descuento'>
-                    <span>Coloque Navidad para un 50%</span>
+                        <label>Coloque "Navidad" para un 50%</label>
                     </div>
-                    <input type="text" autoFocus='off' autoComplete='off' name='descuento' placeholder='Colocar codigo' className='input input-bordered w-full max-w-xs'  />
-                    <button  type={'submit'} >Aceptar</button>
+                    <input type="text" autoFocus='off' autoComplete='off' name='descuento' placeholder='cupon de descuento' className='input input-bordered w-full max-w-xs'  />
+                    <button  type={'submit'}>Aplicar</button>
                     </form>
-                    {
-                        console.log(CodigoDescuento())
-                    }
             </div>
             : <div className='contenedor-input-codigos hidden'></div>
         }
@@ -159,11 +155,13 @@ const Cart = () => {
                         <h3>Resumen</h3>
                     </div>
                 :   <div className='contenedor-caja-compra'>
+                    
+                    
                         <h3>Resumen</h3>
                             <div className='contenedor-precios-resumen'>
                                 <div className='contenedor-subtotal'>
                                     <span>Subtotal</span> 
-                                    <span>US${calcularPrecioTotal() || 0}</span>
+                                    <span>US${calcularSubTotal() || 0}</span>
                                 </div>
                                 <div className='contenedor-impuestos'>
                                     <span>Impuestos (64%)</span>

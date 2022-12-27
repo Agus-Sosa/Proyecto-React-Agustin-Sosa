@@ -92,6 +92,7 @@ h1 {
     padding: 24px;
     width: 500px;
     color: black;
+    position: relative;
     height: 25pc;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;}
 
@@ -246,7 +247,7 @@ h1 {
     margin: 0px 10px;
     position: relative;
     border-radius: 5px;
-    justify-content: center;
+    justify-content: flex-start;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .contenedor-input-codigos form {
@@ -269,19 +270,41 @@ h1 {
 
 }
 
-.cartel-descuento {
+/* .cartel-descuento {
     display: flex;
     position: absolute;
     left: 83%;
     bottom: 41%;
-    background: red;
+    background: red;    
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     color: white;
     width: 161px;
     border-radius: 0px 10px 4px 3px;
+} */
+
+
+.cartel-descuento {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    direction: rtl;
+    background-color: #dc1e4d;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    z-index: 100;
+    right: 0rem;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    box-shadow: 1px 2px 14px 5px #00000070;
+    padding: 1rem;
+    }
+
+.cartel-descuento label {
+    margin-top: .5rem;
+        margin-bottom: .5rem;
+        color: #fff;
 }
-
-
-
 
 
 @media screen and (max-width: 1160px) {

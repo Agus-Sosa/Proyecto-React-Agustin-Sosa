@@ -2,7 +2,11 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import './detail.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
 import {GrFormAdd, GrFormSubtract} from 'react-icons/gr'
+import { Link } from 'react-router-dom';
 
 
 const ItemCount = ({inicial = 1, stock= 0, onAdd}) => {
@@ -17,13 +21,26 @@ const ItemCount = ({inicial = 1, stock= 0, onAdd}) => {
     const aumentar = () =>{
         count < stock 
         ? setCount(count + 1)
-        : alert('No hay stock disponible')
+        : Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No hay stock',
+            })
     }
 
     const disminuir = () => {
         count > inicial+1 
         ? setCount(count -1)
-        : console.log('esta en cero')
+        :  toast('Se Agregaron ' + qty + ' unidades al carrito', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
 
     return (
@@ -40,8 +57,10 @@ const ItemCount = ({inicial = 1, stock= 0, onAdd}) => {
             ? <button className="btn " onClick={()=> onAdd(count) }>Agregar al carrito</button>
             : <button className="btn  " disabled>Agregar al Carrito</button>
         }
-        </>
 
+<ToastContainer/>
+        </>
+    
     );
 }
 

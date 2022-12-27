@@ -59,21 +59,21 @@ const CartContextProvider = ({children}) => {
         return productos.reduce(((acumulador, itemActual) => acumulador + itemActual), 0 );
     }
 
-    const calcularPrecioTotal = () => {
+    const calcularSubTotal = () => {
         return Math.trunc(listaCarrito.reduce((acc, item) => acc + (item.precio * item.qty), 0))
     }
 
     const calcularImpuestos = () => {
-     return Math.trunc( calcularPrecioTotal() * 0.64)
+     return Math.trunc( calcularSubTotal() * 0.64)
     }
 
     const precioTotal = () => {
-        return (calcularPrecioTotal() + calcularImpuestos()) + 5;
+        return (calcularSubTotal() + calcularImpuestos()) + 5;
     }
 
     return (
         <>
-        <CartContext.Provider value={{listaCarrito, agregarAlCarrito, eliminarProducto, eliminarCarrito, CalcularProductoCarrito, calcularPrecioTotal, calcularImpuestos, precioTotal}}>
+        <CartContext.Provider value={{listaCarrito, agregarAlCarrito, eliminarProducto, eliminarCarrito, CalcularProductoCarrito, calcularSubTotal, calcularImpuestos, precioTotal}}>
             {children}
         </CartContext.Provider>
         
