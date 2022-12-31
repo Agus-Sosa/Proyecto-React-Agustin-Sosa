@@ -31,7 +31,4 @@ Este proyecto es libre para ser analizarlo, mejorar el proyecto, copiar ideas. S
 
 ---
 
-Hecho por [Agus-Sosa](https://github.com/Agus-Sosa)
-
-
-
+Hecho por [Agus-Sosa](https://github.com/Agus-Sosa) 🧉😊
