@@ -1,12 +1,10 @@
 import AOS from 'aos';
-import {FiChevronRight} from 'react-icons/fi'
 import Itemlist from "../components/Itemlist";
 import '../components/home.css'
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
 import { db } from "../utils/firebaseConfig";
-import { Link } from "react-router-dom";
 import Portada from '../components/Portada';
 
 const Itemlistcontainer = () =>{

@@ -10,9 +10,6 @@ const ItemDetailContainer = () =>{
     const {idProducto} = useParams();
 
     useEffect (() =>{
-        // fetchData(2000, data.find(item => item.id === parseInt(idProducto)))
-        // .then(response => setDato(response))
-        // .catch(error => error)
         const fetchFireStoreDetail = async() =>{
             const docRef = doc(db, "Productos", idProducto);
                 const docSnap = await getDoc(docRef);
@@ -23,7 +20,6 @@ const ItemDetailContainer = () =>{
                         ...docSnap.data()
                     };
                 } else {
-                    // doc.data() will be undefined in this case
                     console.log("No such document!");
                 }
         }
