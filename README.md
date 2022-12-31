@@ -1,5 +1,6 @@
 
 # Ecommerce
+
 Este proyecto esta basado en ventas de moviles y sus accesorios
 
 
@@ -8,7 +9,7 @@ Este proyecto esta basado en ventas de moviles y sus accesorios
 
 Debes hacer un fork si quieres tener una copia en tu repositorio de Github
 
-Pero si lo que deseas es tener una copia pc local, debes descargar el archivo ZIP
+Pero si lo que deseas es tener una copia en tu pc local, debes descargar el archivo ZIP
 
 
 ## Construido con 🛠️
