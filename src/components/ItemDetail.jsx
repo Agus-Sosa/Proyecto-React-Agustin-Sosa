@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineRight } from 'react-icons/ai'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AiOutlineLeft } from 'react-icons/ai'
 import { ImFacebook, ImTwitter, ImWhatsapp, ImInstagram } from 'react-icons/im'
-import { AiOutlineInstagram } from 'react-icons/ai'
 
 
 const ItemDetail = ({item}) =>{
