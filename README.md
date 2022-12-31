@@ -1,5 +1,6 @@
 
 # Ecommerce
+![gif E-Commerce8](https://user-images.githubusercontent.com/106622274/210126962-ac9fbe7d-540f-454b-8cdf-59bde5d0b441.gif)
 
 Este proyecto esta basado en ventas de moviles y sus accesorios
 
