@@ -21,7 +21,7 @@ Pero si lo que deseas es tener una copia pc local, debes descargar el archivo ZI
 
 + Agustin Sosa - Estudiante de Coderhouse  [@Agus-Sosa](https://github.com/Agus-Sosa)
 ## Licencia 📄
-Este proyecto es libre para ser analizarlo, mejorar el proyecto, copiar ideas. Se agradece una mencion del autor al utilizar el proyecto.
+Este proyecto es libre para analizarlo, mejorar el proyecto, copiar ideas. Se agradece una mencion del autor al utilizar el proyecto.
 
 
 ## Expresiones de Gratitud 🎁
