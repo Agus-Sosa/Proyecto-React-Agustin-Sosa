@@ -36,3 +36,11 @@ body::-webkit-scrollbar-track:hover,
 body::-webkit-scrollbar-track:active {
     background: #d4d4d4;
 }
+
+* header{
+    background: white;
+}
+h1 {
+    font-size: 30px;
+    margin: 20px 0px;
+}

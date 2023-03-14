@@ -1,4 +1,4 @@
-.header {
+s.header {
     background: black;
 }
 
@@ -43,3 +43,18 @@ label span {
     color: white;
 }
 
+.menu-categorias {
+    background: white;
+}
+
+.menu-categoria li {
+    transition: .5s all;
+}
+
+.menu-categoria li:hover {
+    background: black;
+}
+
+.menu-categoria li:active {
+    background: black;
+}

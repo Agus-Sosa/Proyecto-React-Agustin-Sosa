@@ -5,6 +5,10 @@
     box-shadow: 1px 20px 16px 15px black;
 }
 
+footer {
+    color: black;
+}
+
 .icono-github {
     font-size: 43px;
 }

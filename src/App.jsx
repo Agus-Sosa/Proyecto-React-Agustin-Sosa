@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import Cart from "./components/cart";
 import CartContextProvider from "./components/context/CartContext";
+import './App.css'
 const App = () =>{
   return (
     
