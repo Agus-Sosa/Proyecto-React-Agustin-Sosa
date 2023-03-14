@@ -4,7 +4,8 @@ const Portada = () => {
     return (
         <>
         
-        <section className='contenedor-portada-1 flex-wrap'>
+        
+            <section className='contenedor-portada-1 flex-wrap'>
             <div className='contenedor-primera-portada '>
                 <div>
                     <img src="https://www.apple.com/v/iphone-14-pro/b/images/overview/hero/hero_iphone_14_pro__kzr001ge0262_large.jpg" alt="" />
@@ -51,9 +52,9 @@ const Portada = () => {
         </section>
         <div className='titulo-productos'>
             <h1>Productos Destacados</h1>
-        </div> 
+        </div>
             </>
-    )
-}
+            )
+        }
 
-export default Portada
+        export default Portada

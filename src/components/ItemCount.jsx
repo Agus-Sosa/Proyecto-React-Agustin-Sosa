@@ -46,9 +46,9 @@ const ItemCount = ({inicial = 1, stock= 0, onAdd}) => {
         <>
         <section className='contenedor-count'>
     <div className='contenedor-contador'>
-    <button onClick={aumentar}><GrFormAdd/></button>
-    <span>{count}</span>
     <button onClick={disminuir}><GrFormSubtract/></button>
+    <span>{count}</span>
+    <button onClick={aumentar}><GrFormAdd/></button>
     </div>
     </section>
         {

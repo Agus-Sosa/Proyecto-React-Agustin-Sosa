@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import './App.css'
 import Itemlistcontainer from "./containers/Itemlistcontainer";
 import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
