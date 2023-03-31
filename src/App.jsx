@@ -4,8 +4,8 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import CartContextProvider from "./components/context/CartContext";
-import './App.css'
 import Cart from "./components/cart";
+import './App.css'
 const App = () =>{
   return (
     
