@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.cdnfonts.com/css/samsung-sans-4');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 
 * {
     margin: 0px;
