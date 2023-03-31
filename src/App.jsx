@@ -1,4 +1,3 @@
-import './App.css'
 import Header from "./components/Header";
 import Itemlistcontainer from "./containers/Itemlistcontainer";
 import Footer from "./components/Footer";
